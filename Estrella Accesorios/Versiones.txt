@@ -1,0 +1,201 @@
+﻿ESTRELLA ACCESORIOS
+
+
+[17/7/2020 9:55 a. m.] PRESUPUESTO:
+Sistema:
+* Artículos
+* Stock
+* Precio compra
+* Precio venta
+* Utilidad
+* Resúmenes de venta por fechas, por artículos, por tipos de artículos (familias)
+* Visualización de foto del artículo en pantalla sol momento de venta y/o consulta
+* Totalizador de venta
+* Actualizaciones de lista de precios con distintas opciones
+* Impresión de etiquetas con código de barras o qr para cada artículo y otro con precio para el estante.
+* El costo total del desarrollo del sistema es de $ 20.000 e incluye, desarrollo, instalación, periodo de aprendizaje, 3 meses de servicio gratis
+
+[28/07/2020 11:14:03 a. m.] INICIO DEL DESARROLLO: V1.0.0.0
+
+[SISTEMA]
+* Souce Code: VB.Net 2019
+	- .netFramework 4.7.2
+	- Application Windows Form
+	- 32 bits
+	- Microsoft.VisualBasic
+	- System
+	- System.Collections
+	- System.Collections.Generic
+	- System.Data
+	- System.Data.OleDb
+	- System.Diagnostic
+	- System.Drawing
+	- System.Linq
+	- System.Threading.Task
+	- System.Windows.Form
+	- System.Xml.Linq
+	- CrystalDecisions.CrystalReports.Engine
+	- CrystalDecisions.Shared
+	- QRCoder
+	- Controles.dll
+
+* Database: MSACCESS 2007
+
+\Estrella Accesorios
+	* Estrella Aceesorios.exe
+	* Estrella Accesorios.exe.config
+	* Estrella Accesorios.pdb
+	* Estrella Accesorios.xml
+	* Estrella Accesorios.pdb
+	* Estrella Accesorios.mdb
+	* Importar.mdb
+	* Controles.dll
+	* QRCoder.dll
+	* AxShockwaveFlashObjects.dll
+	* ShockwaveFlashObjects.dll
+	* CrystalDecisions.CrystalReports.Engine.dll
+	* CrystalDecisions.ReportAppServer.ClientDoc.dll
+	* CrystalDecisions.ReportAppServer.CommLayer.dll
+	* CrystalDecisions.ReportAppServer.CommonControls.dll
+	* CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+	* CrystalDecisions.ReportAppServer.Controllers.dll
+	* CrystalDecisions.ReportAppServer.CubeDefModel.dll
+	* CrystalDecisions.ReportAppServer.DataDefModel.dll
+	* CrystalDecisions.ReportAppServer.DataSetConversion.dll
+	* CrystalDecisions.ReportAppServer.ObjectFactory.dll
+	* CrystalDecisions.ReportAppServer.Prompting.dll
+	* CrystalDecisions.ReportAppServer.ReportDefModel.dll
+	* CrystalDecisions.ReportAppServer.XmlSerialize.dll
+	* CrystalDecisions.ReportSource.dll
+	* CrystalDecisions.Shared.dll
+	* CrystalDecisions.Windows.Forms.dll
+	* stdole.dll
+\Estrella Accesorios\Imagenes
+\Estrella Accesorios\Imagenes\QR
+
+
+[FORMULARIOS]
+* Frm_Articulos:
+		- ABM (Codigo, Cod. Barras, Descripcion, Importe Compra, Importe Venta, Fecha Modificación, Stock Inicial, Stock Minimo, Imagen, Familia, Sub-Familia, Proveedor)
+		- Modificacion por Lotes de Precios (Porcentaje, Suma, Resta, Multiplizacion, Division, Valor [+ y -])
+		- Busqueda por Codigo, Codigo de Barras, Descripicon, Familia, Sub Familia, Proveedores
+
+* Frm_Configuracion:
+		- Conexion con Base de Datos y Backup
+		- Dias de Alerta en Precios (Venta)
+		- Puerto de Conexion Lector Barras / QR (RS232)
+		- Configuración de colores para estado de STOCK
+
+* Frm_Etiqueta:
+		- ABM de Listado de Articulos y Cantidad de etiquetas para el soporte de estanteria y generacion de codigo QR
+
+* Frm_Familias:
+		- ABM de Familias y Sub-Familias
+
+* Frm_Forma_Pago:
+		- ABM de distintas formas de pago, con descuentos y recargos para las ventas
+
+* Frm_Ingresos:
+		- Altas de cantidades de articulos ingresados al stock, permite ademas modificar los datos de los articulos ya existentes.
+		- Las cantidades ingresadas se permite cargar a las etiquetas de articulos.
+
+* Frm_Login:
+		- Valida el ingreso al sistema con un nombre de usuario y password, devolviendo si es administrador o no para habilitar distintas funciones.
+
+* Frm_Principal:
+		- Página principal de sistema, permite ingresar a:
+				+ Articulos				-> Abre Frm_Articulos
+				+ Ventas				-> Abre Frm_Ventas
+				+ Ingresos				-> Abre Frm_Ingresos
+				+ Estadisticas			-> Abre Frm_Estadisticas (aun no desarrollado)
+				+ Opciones:
+					+ Funciones Varias:
+						+ Exportar Datos:
+							- Permite exportar la base de datos y las imagenes de los articulos a una ubicacion elegida por el usuario
+						+ Importar Datos
+							- Permite importar datos de articulos, proveedores, familias, sub-familias, usuarios y las imagenes de los articulos desde una ubicacion elegida por el usuario
+						+ Etiquetas QR					-> Abre Frm_Qr
+						+ Etiquetas Para Estanterias	-> Abre Frm_Etiquetas
+						+ Configuracion del sistema		-> Abre Frm_Opciones
+					+ Usuario			-> Abre Frm_Usuarios
+					+ Forma de Pagos	-> Abre Frm_Forma_Pago
+					+ Proveedores		-> Abre Frm_Proveedores
+					+ Familias			-> Abre Frm_Familias
+				+ Salir del Sistema:
+							- Cierra el aplicativo.
+
+* Frm_Proveedores:
+		- ABM de Proveedores
+
+* Frm_QR:
+		- ABM de Etiquetas de articulos con generacion de codigo QR
+
+* Frm_Usuarios:
+		- ABM de Usuarios (Nombre, Password, Administrador, Habilitado)
+
+* Frm_Ventas:
+		- Arma el listado de articulos vendidos, permitiendo ingresar codigo (o buscarlo) y cantidad, mostrando los datos mas significativos
+		- Muestra si el articulo esta en stock pero permite venderlo si no fugura en sistema
+		- Muestra advertencia de dias sin actualizar el precio
+		- Calcula descuentos y recargos segun forma de pago elegida
+		- Calcula vuelto
+
+* Frm_Vista_Previa:
+		- Muestra la vista previa de informes y etiquetas para su impresion o exportacion
+
+
+[REPORTES]
+* Rpt_Etiquetas: Etiquetas para articulos (QR, codigo, descripcion) - Medidas (3.56 x 1.69 - A4)
+* Rpt_Etiquetas1: Etiquetas para articulos (QR, codigo) - Medidas (3.56 x 1.69 (2 por etiqueta) - A4)
+* Rpt_Etiquetas_Estanteria: Etiquetas para estanterias (QR, codigo, descripcion, precio venta) - Medidas (5 x 3 - A4)
+* Rpt_Ventas: Reporte detallado de venta realizada, Fecha, Cantidad, Descripcion, Importe Unitario, Total Linea, Total General) - Medidas (A4)
+
+[MODULOS / CLASES]
+* ListViewColumnSort (Clase):
+		- Clase para Ordenar los datos por tipo de datos de  columna elegida de un ListView (Texto / Numero / Fecha)
+
+* QR (clase):
+		- Core para la generación de codigos QR en archivo de imagen .png
+		- uso de paquete (QRCoder)
+				+ Generar_QR(Texto As String, Tamano As Integer) As Bitmap
+				+ Generar_QR(ByVal Texto As String, ByVal Tamano As Integer, ByVal HtmlHexColor1 As String, ByVal HtmlHexColor2 As String) As Bitmap
+				+ Generar_QR(ByVal Texto As String, ByVal Tamano As Integer, ByVal Color1 As Color, ByVal Color2 As Color) As Bitmap
+
+* Servidor_SQL (clase):
+		- Core para la conexion con base de datos y ejecucion de consultas SQL
+		- uso de paquete (System.Data.OleDb)
+				+ Conectado() As Boolean
+				+ Conectar(CadenaCNX As String) As Boolean
+				+ Ejecutar_SQL(ByVal SQL As String) As Boolean
+				+ Ejecutar_SQL(ByVal SQL As String, ByRef Consulta As OleDbDataReader) As Boolean
+				+ Ejecutar_SQL(ByVal SQL As String, ByRef Codigo_Return As Long, ByVal Campo_ID As String, ByVal Tabla As String) As Boolean
+
+* Variables_Funciones (Modulo):
+		- Funciones y Variables Generales
+				+ Enum Origen
+				+ Base As New Servidor_SQL
+				+ Administrador As Integer
+				+ Usuario As Integer
+				+ Function CCdec(ByVal Valor As String) As Decimal
+				+ Function Acortar_Ruta(Ruta As String, Largo_Maximo As Integer) As String
+				+ Function Importar_BD_CMD(Origen As String) As Boolean
+				+ Function Exportar_BD_CMD(Destino As String) As Boolean
+				+ Function CopiarDirectorio(ByVal Origen As String, ByVal Destino As String, Optional ByVal SobreEscribir As Boolean = True, Optional ByVal CopiarSubDirectorios As Boolean = True) As Boolean
+				+ Function CopiarArchivo(ByVal Origen As String, ByVal Destino As String, Optional ByVal Sobreescribir As Boolean = True) As Boolean
+				+ Function Proximo_Codigo(ByVal Campo As String, ByVal Tabla As String) As Integer
+				+ Function AbrirImagen(ByVal Archivo_Imagen As String) As Image
+
+[CONFICURACIONES]
+* UltimoLogin: Integer - Codigo del ultimo usuario que ingreo exitosamente al sistema
+* Database: String - Ruta de la base de datos
+* Uid: String - Nombre del usuario de la DB
+* Password: String - Password de la DB
+* Arch_Intercambio: String - Archivo para hacer las actualizaciones
+* Dias_Aviso: Integer - Cantidad de dias para dar advertencia el precios
+* Color0: System.Drawing.Color - Color de articulos sin stock
+* Color1: System.Drawing.Color - Color de articulos con stock por debajo del minimo
+* Color2: System.Drawing.Color - Color de articulos con stock
+* Com: String - Puerto COM del Lector QR
+
+[2020-08-22 18:38] - PUESTA EN MARCHA VERSION 1.0.0.0
+[2020-08-26 16:22] - DEHABILITACION DEL PUERTO RS232 Y CAMBIO DE MODO DEL LECTOR A USB

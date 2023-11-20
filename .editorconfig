@@ -1,0 +1,4 @@
+﻿[*.vb]
+
+# BC42030: La referencia pasa una variable ates de que se le haya asignado un valor
+dotnet_diagnostic.BC42030.severity = none

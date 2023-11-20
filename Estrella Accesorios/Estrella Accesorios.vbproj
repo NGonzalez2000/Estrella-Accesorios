@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8620FCE9-DD8C-4C3A-98CF-416C251EB89C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Estrella_Accesorios.My.MyApplication</StartupObject>
+    <RootNamespace>Estrella_Accesorios</RootNamespace>
+    <AssemblyName>Estrella Accesorios</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\Mis Cosas\Programación\Visual Basic\.net\Publicaciones\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Estrella Accesorios.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <Prefer32Bit>true</Prefer32Bit>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Estrella Accesorios.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Imagenes\Estrella.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Controles">
+      <HintPath>..\packages\Controles.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.3.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.3.9\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Frm_Articulos.Designer.vb">
+      <DependentUpon>Frm_Articulos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Articulos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListViewColumnSort.vb" />
+    <Compile Include="Frm_Configuracion.Designer.vb">
+      <DependentUpon>Frm_Configuracion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Configuracion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Etiqueta.Designer.vb">
+      <DependentUpon>Frm_Etiqueta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Etiqueta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Ingresos.Designer.vb">
+      <DependentUpon>Frm_Ingresos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Ingresos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Proveedores.Designer.vb">
+      <DependentUpon>Frm_Proveedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Proveedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_QR.Designer.vb">
+      <DependentUpon>Frm_QR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_QR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QR.vb" />
+    <Compile Include="Rpt_Etiquetas.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rpt_Etiquetas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Frm_Familias.Designer.vb">
+      <DependentUpon>Frm_Familias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Familias.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Forma_Pago.Designer.vb">
+      <DependentUpon>Frm_Forma_Pago.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Forma_Pago.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Usuarios.Designer.vb">
+      <DependentUpon>Frm_Usuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Usuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Ventas.Designer.vb">
+      <DependentUpon>Frm_Ventas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Ventas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Login.Designer.vb">
+      <DependentUpon>Frm_Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Principal.Designer.vb">
+      <DependentUpon>Frm_Principal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Principal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Rpt_Etiquetas1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rpt_Etiquetas1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rpt_EtiquetasEstanteria.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rpt_EtiquetasEstanteria.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rpt_EtiquetasEstanteria1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rpt_EtiquetasEstanteria1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rpt_Ventas.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rpt_Ventas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Servidor_SQL.vb" />
+    <Compile Include="Variables_Funciones.vb" />
+    <Compile Include="Frm_Vista_Previa.Designer.vb">
+      <DependentUpon>Frm_Vista_Previa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Vista_Previa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Frm_Articulos.resx">
+      <DependentUpon>Frm_Articulos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Etiqueta.resx">
+      <DependentUpon>Frm_Etiqueta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpt_Etiquetas1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_Etiquetas1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpt_EtiquetasEstanteria.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_EtiquetasEstanteria.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpt_EtiquetasEstanteria1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_EtiquetasEstanteria1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpt_Ventas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_Ventas.vb</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Imagenes\chart.png" />
+    <None Include="Imagenes\Impresora-32.png" />
+    <None Include="Imagenes\Impresora-1-32.png" />
+    <None Include="Imagenes\Impresora-1-72.png" />
+    <None Include="Imagenes\Borrar-1-32.png" />
+    <None Include="Imagenes\Borrar-1-48.png" />
+    <None Include="Imagenes\Stock Amarillo-128.png" />
+    <None Include="Imagenes\Stock Azul-128.png" />
+    <None Include="Imagenes\Stock Fucsia-128.png" />
+    <None Include="Imagenes\Stock Rojo-128.png" />
+    <None Include="Imagenes\Stock Verde-128.png" />
+    <None Include="Imagenes\Etiqueta QR-64.png" />
+    <None Include="Imagenes\Exportar-1-64.png" />
+    <None Include="Imagenes\Importar-1-64.png" />
+    <None Include="Imagenes\Etiqueta Precio-64.png" />
+    <None Include="Imagenes\Database.ico" />
+    <None Include="Imagenes\Ajustes-32.png" />
+    <None Include="Imagenes\Ajustes-48.png" />
+    <None Include="Imagenes\Ajustes-64.png" />
+    <None Include="Imagenes\Advertencia-128.png" />
+    <None Include="Imagenes\Advertencia-1-128.png" />
+    <EmbeddedResource Include="Rpt_Etiquetas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_Etiquetas.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Configuracion.resx">
+      <DependentUpon>Frm_Configuracion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Familias.resx">
+      <DependentUpon>Frm_Familias.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Forma_Pago.resx">
+      <DependentUpon>Frm_Forma_Pago.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Ingresos.resx">
+      <DependentUpon>Frm_Ingresos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Proveedores.resx">
+      <DependentUpon>Frm_Proveedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_QR.resx">
+      <DependentUpon>Frm_QR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Usuarios.resx">
+      <DependentUpon>Frm_Usuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Ventas.resx">
+      <DependentUpon>Frm_Ventas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Login.resx">
+      <DependentUpon>Frm_Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Principal.resx">
+      <DependentUpon>Frm_Principal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Vista_Previa.resx">
+      <DependentUpon>Frm_Vista_Previa.vb</DependentUpon>
+    </EmbeddedResource>
+    <None Include="My Project\app.manifest" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Estrella.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Corazón.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Estralla Diamante.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Carrito.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Candado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Aceptar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Aceptar-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Cancelar-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Estadisticas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Estadisticas-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Apagar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\20200610_233204.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Estrella.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Estrella Accesorios.mdb" />
+    <EmbeddedResource Include="Versiones.txt" />
+    <None Include="Imagenes\Stock Rojo-16.png" />
+    <None Include="Imagenes\Stock Amarillo-16.png" />
+    <None Include="Imagenes\Stock Verde-16.png" />
+    <None Include="Imagenes\Editar-72.png" />
+    <None Include="Imagenes\Editar-96.png" />
+    <None Include="Imagenes\Editar-128.png" />
+    <None Include="Imagenes\Editar-64.png" />
+    <None Include="Imagenes\Borrar-1-64.png" />
+    <None Include="Imagenes\Aceptar Compra-96.png" />
+    <None Include="Imagenes\Aceptar Compra-64.png" />
+    <None Include="Imagenes\Aceptar Compra.png" />
+    <None Include="Imagenes\Cancelar.png" />
+    <None Include="Imagenes\Valor-24.png" />
+    <None Include="Imagenes\Dividir-24.png" />
+    <None Include="Imagenes\Multiplicar-24.png" />
+    <None Include="Imagenes\Suma-Resta-24.png" />
+    <None Include="Imagenes\Porcentaje-24.png" />
+    <None Include="Imagenes\Exportar-64.png" />
+    <None Include="Imagenes\Lector-48.png" />
+    <None Include="Imagenes\Resta-24.png" />
+    <None Include="Imagenes\Suma-24.png" />
+    <None Include="Imagenes\Calculadora.png" />
+    <None Include="Imagenes\Limpiar.png" />
+    <None Include="Imagenes\Cancelar-64.png" />
+    <None Include="Imagenes\Borrar-64.png" />
+    <None Include="Imagenes\Modificar-64.png" />
+    <None Include="Imagenes\Agregar-64.png" />
+    <None Include="Imagenes\Buscar-64.png" />
+    <None Include="Imagenes\Buscar-48.png" />
+    <None Include="Imagenes\Exportar-48.png" />
+    <None Include="Imagenes\Familias.png" />
+    <None Include="Imagenes\Forma Pago.png" />
+    <None Include="Imagenes\Proveedor-48.png" />
+    <None Include="Imagenes\Usuario-48.png" />
+    <None Include="Imagenes\Engranajes.png" />
+    <None Include="Imagenes\Ingresos.png" />
+    <None Include="Imagenes\CB.png" />
+    <None Include="Imagenes\Cancelar.ico" />
+    <None Include="Imagenes\Borrar.ico" />
+    <None Include="Imagenes\Modificar.ico" />
+    <None Include="Imagenes\Agregar.ico" />
+    <None Include="Imagenes\Buscar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <ItemGroup>
+    <None Include="Imagenes\Modificar.ico" />
+    <None Include="Imagenes\Agregar.ico" />
+    <None Include="Imagenes\Buscar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
